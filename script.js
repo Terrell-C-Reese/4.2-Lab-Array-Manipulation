@@ -9,6 +9,7 @@ function showUpdatedDisplay() {
     for(let i = 0; i < shoppingList.length; i++) {
         let currentItem = shoppingList[i];
         let listItem = document.createElement("li");
+        listItem.className = "list-group-item";
         listItem.textContent = currentItem;
         showList.appendChild(listItem);
     }
