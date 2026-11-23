@@ -4,7 +4,7 @@ function addItems(item)
     {
         shoppingList.push(item);
     }
-function removeLastItem(shoppingList)
+function removeLastItem()
     {
         shoppingList.pop();
     }
