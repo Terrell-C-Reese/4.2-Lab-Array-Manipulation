@@ -1,10 +1,8 @@
-function addItem(item)
-    {
+function addItem(item){
         let sameItem = false;
-            for(i = 0; i < shoppingList.length; i++)
+            for(let i = 0; i < shoppingList.length; i++)
                 {
-                    let currentItem = shoppingList[i];
-                    
+                    let currentItem = shoppingList[i];                    
                     if(currentItem.toLowerCase() === item.toLowerCase()){
                         sameItem = true;
                         break;
@@ -16,5 +14,18 @@ function addItem(item)
                     else {
                             console.log(item + "is already in the shopping cart.");
                     }
-    
+    }
+
+function filterItems(searchItem){
+    let filteredItems = [];
+        for(let i = 0; i < shoppingList.length; i++ )
+            {
+                let currentItem = shoppingList[i];
+
+                if(currentItem.toLowerCase().includes(searchItem.toLowerCase())) {
+                    filteredItems.push(currentItem);
+                }
+            }
+
+        return filteredItems;
     }
