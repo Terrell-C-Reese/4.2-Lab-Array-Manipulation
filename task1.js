@@ -8,7 +8,7 @@ function removeLastItem()
     {
         shoppingList.pop();
     }
-function displayList(shoppingList)
+function displayList()
     {
         console.log("Current Shopping List", shoppingList);
     }

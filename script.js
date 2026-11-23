@@ -1,16 +1,16 @@
 const itemSubmit = document.getElementById("itemSubmit");
 const addBtn = document.getElementById("addBtn");
 const removeBtn = document.getElementById("removeBtn");
-const displayList = document.getElementById("displayList");
+const showList = document.getElementById("showList");
 
 function showUpdatedDisplay() {
-    displayList.innerHTML = "";
+    showList.innerHTML = "";
 
     for(let i = 0; i < shoppingList.length; i++) {
         let currentItem = shoppingList[i];
-        let listItem = document.createElement("listItem");
+        let listItem = document.createElement("li");
         listItem.textContent = currentItem;
-        displayList.appendChild(listItem);
+        showList.appendChild(listItem);
     }
 }
 function addItemToList(){
