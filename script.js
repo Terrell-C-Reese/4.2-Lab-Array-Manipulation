@@ -3,7 +3,7 @@ const addBtn = document.getElementById("addBtn");
 const removeBtn = document.getElementById("removeBtn");
 const displayList = document.getElementById("displayList");
 
-function showDisplay() {
+function showUpdatedDisplay() {
     displayList.innerHTML = "";
 
     for(let i = 0; i < shoppingList.length; i++) {
@@ -13,3 +13,21 @@ function showDisplay() {
         displayList.appendChild(listItem);
     }
 }
+function addItemToList(){
+    let itemNew = itemSubmit.value.trim();
+
+    if(itemNew !== "") {
+        addItem(itemNew);
+        itemSubmit.value = "";
+        showUpdatedDisplay();
+        displayList();
+    }
+}
+function removeLastItemFromList(){
+    removeLastItem();
+    showUpdatedDisplay();
+    displayList();
+}
+
+addBtn.addEventListener("click", addItemToList);
+removeBtn.addEventListener("click", removeLastItemFromList);

@@ -12,7 +12,7 @@ function addItem(item){
                         shoppingList.push(item);
                     }
                     else {
-                            console.log(item + "is already in the shopping cart.");
+                            console.log(item + " is already in the shopping cart.");
                     }
     }
 
